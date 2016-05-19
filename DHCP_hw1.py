@@ -150,6 +150,8 @@ class DHCPAck:
         packet += b'\x3d\x06\x00\x26\x9e\x04\x1e\x9b'  # Option: (t=61,l=6) Client identifier
         packet += b'\x3d\x06' + macb
         packet += b'\x37\x03\x03\x01\x06'  # Option: (t=55,l=3) Parameter Request List
+        packet += b'\x34\x03\x03\x01\x06'  # Option: (t=55,l=3) Parameter Request List
+
         packet += b'\xff'  # End Option\
 
         return packet
